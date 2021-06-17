@@ -1,13 +1,226 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preliminary Interview Test</title>
+    <link rel="stylesheet" href="css/main.css">
 
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<h3>This is heading 3</h3>
-<h4>This is heading 4</h4>
-<h5>This is heading 5</h5>
-<h6>This is heading 6</h6>
+    <script>
+        $(document).ready(function(){
+        $('.navbar a').on('click', function(e){
+            if(this.hash !== ''){
+                e.preventDefault();
+    
+                const hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, "slow");
+            }
+        }) 
+    });
+    </script>
+</head>
+<body data-spy="scroll" data-target="#mynav"> <!--This is the body where everything pretty much happens -->
+
+    <!--First section/block for the top navigation bar for mobile and desktop version-->
+    <div id="mynav" class="navbar"> <!-- navigation bar-->
+        <div class="container"> <!--Inside navbar we put a container-->
+            <a class="logo" href="#">Richard<span>  Ebo</span></a> <!--Used span tag to change my text generted logo-->
+
+            <!--navigation bar for mobile phone view-->
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+            
+            <!--navigations for top. etc-->
+            <nav>
+                <img  id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+
+                <ul class="primary-nav"> <!--using unordered list-->
+                    <li id="about-me" class="current"><a href="#About">About Me</a></li>
+                    <li><a id="skills" href="#Skills">Skills</a></li>
+                    <li><a id="work-exp" href="#Work-exp">Work Experience</a></li>
+                </ul>
+
+                <ul class="secondary-nav"> 
+                    <li id="contact" class="current"><a href="#Contact">Contact</a></li>
+                    <li id="lets-talk" class="go-premium-cta"><a href="#Lets-chat">Let's Talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<!--Second section/block for the contents-->
+    <section id="About" class="hero">
+        <div  class="container">
+            <div class="left-col">
+                <p class="subhead">Hello, I'm</p>
+                <h1>Richard Makua Ebo</h1>
+                <p class="body">Mobile App Developer</p>
+                <p class="sub-body">I am a software engineer with a keen interest in building 
+                    solutions and solving real life problems. A team player and a high performer.
+                    I have experience in using technologies such as Java, Kotlin, JavaFX, C++, Android, SQLite and JUnit.</p>
+                
+                    <div class="hero-cta">
+                        <a id="contact-me" href="#Contact" class="primary-cta">Contact me</a>
+                        
+                    </div>    
+                
+            </div>
+
+            <img src="Website photos/first.jpg" class="hero-img" alt="Illustration">
+        </div>
+    </section>
+
+
+<!--Third section/block for the lists contents-->
+    <section id="Skills" class="features-section">
+        <div class="container">
+            <ul class="skill-list">
+                <li>MY SKILLS</li>
+            </ul>
+
+            <ul class="features-list">
+                <li>Java (Fluent)</li>
+                <li>JavaFX (Fluent)</li>
+                <li>Kotlin (Intermediate)</li>
+                <li>Android (Intermediate)</li>
+                <li>C++ (Intermediate)</li>
+                <li>MATLAB/SIMULINK (Intermedite)</li>
+                <li>HTML/CSS(Intermediate)</li>
+            </ul>
+
+            <div class="container">
+                <ul class="education-list">
+                    <li>EDUCATION</li>
+                </ul>
+    
+                <ul class="features-list">
+                    <li>FSLC - All Saints Primary School, Onitsha (2002-2008))</li>
+                    <li>JSCE/WAEC - Federal Government Girls College, Onitsha (2008-2011)</li>
+                    <li>SSCE/WAEC - Fedreral Government College, Nise (2011-2014)</li>
+                    <li>B.sc - Nnamdi Azikiwe University, Awka (2015-2020)</li>
+                    
+                </ul>
+
+            <img src="Website photos/second.jpg" alt="second">
+        </div>
+    </section>
+
+    <!--Fourth section/block for the testimonials-->
+
+    <section id="Work-exp" class="testimonials-section">
+
+        <div class="container">
+
+            <h1 class="portfolio-label">Work Experience</h1>
+
+            <ul>
+                <li>
+                    <img src="Website photos/Nigerian-Breweries.jpg" alt="NB">
+
+                    <blockquote>Actively involved in performing audits and identifying loss deviations, 
+                        Assisting in regulating work-flow amongst technologists, 
+                        Translate process workflow to readable data, 
+                        Use of software packaages such as Ms. Word, Access, and Excel, 
+                        Developing technologists work shift schedules.
+                        <p class="cite">Internship</p>
+                        <p>Nigerian Breweries PLC- Lagos, Nigeria.</p>
+                        <p>Jun 2019 - Dec 2019</p>
+                    </blockquote>
+                    
+                </li>
+
+                <li>
+                    <img src="Website photos/spac2.svg" alt="spac">
+
+                    <blockquote>I volunteered to help in the professional awareness conference aimed at creating awareness about opportunies in software technology and information technology,
+                         through research and open discussions with my fellow students and professionals in software development field.
+                         <p class="cite">Student Volunteer</p>
+                         <p>Students Professional Awareness Conference (SPAC)</p>
+                         <p>March 2021</p>
+                        </blockquote>
+                </li>
+
+                <li>
+                    <img src="Website photos/cmd.png" alt="cmd">
+
+                    <blockquote>Actively led a student team of eager software developers
+                        aimed at boosting growth and level of competence in our software development skills, 
+                        in developing a FUND COLLATION SOFTWARE used in taking records of the monthly funds contributed 
+                        by the team members with a unique way of displaying the records and 
+                        notifying members if payment date is overdue via email.   
+                        <p class="cite">Leader CMD Students-Tech Group</p>
+                         <p>Nov 2019 - June 2021</p>
+                    </blockquote>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+ <!--Last section/block for Contact-->
+    <section class="contact-section">
+        <div class="container">
+            <div id="Contact" class="contact-left">
+                <h2>Contact</h2>
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send Message">
+                </form>
+            <div id="Lets-chat" class="contact-down">
+                <h1 class="chat">Let's Chat</h1>
+
+                <a href="https://www.linkedin.com/in/richard-ebo-9ba7a3202/" >
+                    <img class="lets-chat" src="Website photos/linkedIn.png" alt="LinkedIn">LinkedIn
+               </a>
+                <a href="mailto: richardebboh@gmail.com" >
+                    <img class="lets-chat" src="Website photos/email.png" alt="Facebook">Email
+                </a>
+                <a href="https://github.com/solidtm">
+                    <img class="lets-chat"src="Website photos/github.png" alt="Github">Github
+                </a>
+                <a href="#">
+                    <img class="lets-chat" src="Website photos/mobile.png" alt="07067807998">07067807998
+                </a>
+            </div>
+                
+            </div>
+
+            <div class="contact-right">
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126939.60896141188!2d6.726998181308921!3d6.149124368265786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104393bed6cb93b7%3A0xd75544d3750782f7!2sOnitsha!5e0!3m2!1sen!2sng!4v1623820306740!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+                <img src="Website photos/single.jpeg" class="contact-img" alt="Illustration">
+                <img src="Website photos/fourth.jpeg" class="contact-img2" alt="Illustration">
+                <img src="Website photos/third.jpeg" class="contact-img3" alt="Illustration">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta') //use this to select element that has an id
+        nav = document.querySelector('nav') //use this to select an element name
+        mobileBtnExit = document.getElementById('mobile-exit')
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn') //on click of menu btn, display the nav bar
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn') //on click of menu btn, display the nav bar
+        })
+    </script>
+
+
 
 </body>
 </html>
