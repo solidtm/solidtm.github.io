@@ -131,7 +131,6 @@ ul { /*Unordered list styling*/
 
  section.features-section{
      background: #20272E;
-    // background: url('../Website photos/single.jpeg');
      color: white;
  }
 
@@ -163,9 +162,9 @@ ul.education-list{
        margin-bottom: .5em;
        margin-left: .3em;
        position: relative;
+       
     }
 }
-
 
  ul.features-list{
      margin: 0;
@@ -190,6 +189,8 @@ ul.education-list{
             margin-right: .5em;
         }
      }
+
+     
  }
 
  .features-section img{
@@ -527,4 +528,3 @@ nav{
         }
     }
 }
-
