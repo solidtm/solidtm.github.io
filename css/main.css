@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /*Define the constant color schemes of our website*/
