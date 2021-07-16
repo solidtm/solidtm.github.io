@@ -57,6 +57,7 @@ body {
 a {
   /*All links in our html stylings*/
   color: #444444;
+  
 }
 
 ul {
@@ -68,7 +69,7 @@ ul {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 1.5em;
 }
 
 .hero {
@@ -85,8 +86,8 @@ section {
 
 .left-col h1 {
   font-size: 2.5em;
-  line-height: 1.3em;
-  margin-top: .2em;
+  line-height: 1.1em;
+  margin: 1rem 0 4rem;
 }
 
 .left-col .body {
@@ -126,6 +127,7 @@ section {
 section.features-section {
   background: #20272E;
   color: white;
+  padding: 1.5rem;
 }
 
 ul.skill-list {
@@ -138,7 +140,7 @@ ul.skill-list {
 }
 
 ul.skill-list li {
-  font-size: 2.5em;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: .5em;
   margin-left: .3em;
@@ -155,7 +157,7 @@ ul.education-list {
 }
 
 ul.education-list li {
-  font-size: 2.5em;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: .5em;
   margin-left: .3em;
@@ -172,7 +174,7 @@ ul.features-list {
 }
 
 ul.features-list li {
-  font-size: 1.1em;
+  font-size: .9rem;
   margin-bottom: 2em;
   margin-left: 2em;
   position: relative;
@@ -196,15 +198,17 @@ ul.features-list li:before {
 .testimonials-section {
   background: var(--primary-color);
   color: white;
+  padding: 1.5rem 1rem;
 }
 
 .testimonials-section li {
   background: #006BD6;
   text-align: center;
-  padding: 2m 1em;
-  width: 80%;
+  width: 100%;
   margin: 0 auto 5em auto;
   border-radius: 1em;
+  font-size: .7rem;
+  padding: 0 0 1rem 0;
 }
 
 .testimonials-section li img {
@@ -220,10 +224,11 @@ ul.features-list li:before {
 }
 
 .testimonials-section .portfolio-label {
-  font-size: 4.5em;
+  font-size: 2rem;
+  line-height: 1.2;
   font-weight: bold;
   margin-top: 0em;
-  margin-bottom: 2em;
+  margin-bottom: 6rem;
   text-align: center;
 }
 
@@ -275,12 +280,14 @@ input[type="submit"] {
   margin-left: 7em;
   margin-top: 1em;
   margin-bottom: 1em;
+  display: none;
 }
 
 .contact-img2 {
   width: 100%;
   height: 350px;
   margin-top: 0em;
+  display: none;
 }
 
 .contact-img3 {
@@ -288,6 +295,7 @@ input[type="submit"] {
   height: 290px;
   margin-top: 0em;
   margin-left: 9em;
+  display: none;
 }
 
 .contact-left {
@@ -297,12 +305,19 @@ input[type="submit"] {
 .contact-left a {
   font-size: 1.3em;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: .5rem 0;
+}
+
+.contact-left a img{
+  margin-right: 1rem;
 }
 
 .chat {
   font-weight: bold;
-  font-size: 3em;
-  text-align: center;
+  font-size: 2em;
   margin-bottom: .1em;
   margin-top: 0em;
 }
@@ -312,12 +327,23 @@ input[type="submit"] {
   height: 2em;
 }
 
+.contact-down a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.contact-down a img{
+  margin-right: 1rem;
+}
+
 nav.menu-btn {
   display: block;
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   z-index: 999;
   width: 55%;
   right: 0;
@@ -336,12 +362,14 @@ nav li a {
   text-decoration: none;
   display: block;
   padding: .5em;
-  font-size: 1.3em;
+  font-size: 1em;
   text-align: right;
+  font-weight: 300;
+  transition: .75s;
 }
 
 nav li a:hover {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .mobile-menu-exit {
@@ -403,6 +431,10 @@ nav li a:hover {
     background: var(--primary-color);
     color: white;
   }
+
+  .features-section img {
+    display: none;
+}
 }
 
 @media only screen and (min-width: 1080px) {
@@ -456,11 +488,7 @@ nav li a:hover {
     position: relative;
   }
   .features-section img {
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 350px;
-    bottom: -2em;
+    display: none;
   }
   .testimonials-section ul {
     display: -webkit-box;
@@ -470,6 +498,11 @@ nav li a:hover {
   .testimonials-section ul li {
     margin: 0 1em;
   }
+
+  .testimonials-section li {
+    font-size: 1rem;
+  }
+
   .contact-section {
     position: relative;
   }
@@ -477,16 +510,29 @@ nav li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  .contact-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 45%;
-    height: 100%;
+
+  .contact-section .container .contact-left,
+  .contact-section .container .contact-down{
+    flex-basis: 100%;
   }
-  .contact-right iframe {
-    height: 100%;
+
+  .contact-section .container .contact-down h1{
+    margin-bottom: 1rem;
+  }
+
+  .contact-section .container .contact-down a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .contact-section .container .contact-down a img{
+    margin-right: 1rem;
   }
 }
 
